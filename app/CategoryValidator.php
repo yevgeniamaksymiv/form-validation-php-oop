@@ -6,7 +6,7 @@ class CategoryValidator extends Validator
 {
     public function validate($value)
     {
-        if (in_array((int) $value, [1, 2, 3])) {
+        if (isset($value) && in_array((int) $value, [1, 2, 3])) {
             $this->errorTxt = '';
             $this->isError = false;
         } else {
